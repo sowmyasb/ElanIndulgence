@@ -129,7 +129,7 @@ public class FilterDB extends Controller {
 */	
 	public static List<Product> getProductByProdTypeAndRatingWithUserName(
 		 int prod_type, String username,	int page_num) throws Exception {
-
+System.out.println("User name "+username);
 		Connection conn = initializeConnection();
 		String stmt = "select color_id from user_prefs where user_name='"
 				+ username + "'";
@@ -154,7 +154,7 @@ public class FilterDB extends Controller {
 
 	public static Result getProductByMerchTypeAndRatingWithUserName(
 			int page_num, String merch, String username) throws Exception {
-
+		System.out.println("User name:"+username);
 		Connection conn = initializeConnection();
 		String stmt = "select color_id from user_prefs where user_name='"
 				+ username + "'";
